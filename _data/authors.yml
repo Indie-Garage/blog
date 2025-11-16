@@ -1,0 +1,11 @@
+Tony Ahn:
+  name: "안성진 (Tony Ahn)"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio: "Microsoft Certified Trainer"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-square-linkedin"
+      url: "https://www.linkedin.com/in/sungjin-ahn/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:contact@indie-garage.com"
