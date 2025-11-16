@@ -1,4 +1,7 @@
 # Welcome to Jekyll!
+# 
+# Refer to the following guideline: https://mmistakes.github.io/minimal-mistakes/docs/configuration/
+# Sample file: https://github.com/mmistakes/minimal-mistakes/blob/master/_config.yml
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -13,25 +16,31 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+title: Indie Garage Blog
+title_separator: "-"
+subtitle: "Place where your dreams come true"
+description: "Microsoft의 AI Business Solutions(M365, Power Platform)과 관련된 정보를 공유하는 블로그입니다."
+url: "https://blog.indie-garage.com"
+repository: Indie-Garage/blog
+# teaser: "/assets/images/bio-photo.jpg" #https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-default-teaser-image
+# logo: #https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-masthead-logo
+# masthead_title: #https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-masthead-title
 minimal_mistakes_skin: default
 search: true
+copyright: "Indie Garage"
+copyright_url: "https://indie-garage.com"
+enable_copy_code_button: true
 
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+date_format: "%Y-%m-%d"
 
 include:
   - _pages
@@ -58,34 +67,32 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Indie Garage"
+  # avatar : "/assets/images/bio-photo.jpg"
+  bio    : "Microsoft의 AI Business Solutions(M365, Power Platform)과 관련된 정보를 공유하는 블로그입니다."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: &websiteURL "https://indie-garage.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: &githubURL "https://github.com/indie-garage"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: &email "mailto:contact@indie-garage.com"
 
 footer:
+  since: "2025"
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: *websiteURL
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: *githubURL
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: *email
 
 defaults:
   # _posts
@@ -93,11 +100,12 @@ defaults:
       path: ""
       type: posts
     values:
+      show_date: true
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
+      read_time: false
+      comments: false #https://mmistakes.github.io/minimal-mistakes/docs/configuration/#comments
+      share: false
       related: true
   # _pages
   - scope:
